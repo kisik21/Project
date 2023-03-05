@@ -3,7 +3,7 @@
 * {
     font-family:'Roboto', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
-    font-weight: 400;
+    
 }
 
 body {
@@ -17,10 +17,18 @@ body {
 }
 
 .header {
+   
     width: 100%;
     position: fixed;
     top: 0;
+    
+
+}
+
+.header_box {
+    max-width: 1920px;
     padding: 38px 80px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,8 +67,25 @@ body {
     color: #ffffff;
 }
 
+.button-sunset {
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+
+}
+
+.header__menu-box {
+    max-width: 40px;
+    margin-left: 40px;
+    display: none;
+}
+
+.main {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 .first_screen {
     height: 100vh;
+    max-height: 960px;
     background-image: url(./images/first-screen-background.png);
     display: flex;
     flex-direction: column;
@@ -68,7 +93,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.first_scrreen_head {
+.first_screen_head {
     font-size: 64px;
     font-weight: 700 !important;
     line-height:1.5;
@@ -76,7 +101,7 @@ body {
     padding-top: 270px;
 }
 
-.first_scrreen_head span {
+.first_screen_head span {
     display: block;
 }
 
@@ -111,4 +136,133 @@ body {
     color: #ffffff;
     opacity: 0.4;
     text-align: center;
+}
+
+.first_screen_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter {
+    width: 251px;
+
+}
+
+.counter_earned {
+    width: 280px;
+}
+
+.counter_progress {
+    width: 100%;
+}
+
+.counter_item {
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    display: flex;
+}
+
+.counter_item:not(:last child) {
+    margin-top: 10px;
+}
+
+.counter_name {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.4);
+    
+}
+
+.counter_count {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.first_screen_earned {
+    width: 715px;
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.progress-bar_progress {
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+}
+
+@media screen and (max-width: 1810px) {
+    .page-indent {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .header_menu-wrapper {
+        margin-right: 100px;
+    }
+
+    .first_screen {
+        background-size: cover;
+        background-position: right center;
+    }
+}
+
+@media screen and (max-width: 1570px) {
+    .page-indent {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .header_menu-wrapper {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .menu_item {
+        margin-right: 35px;
+    }
+
+    .first_screen_earned {
+        width: 520px;
+    }
+
+}
+
+@media screen and (max-width: 1150px) {
+    .header__menu-box {
+        display: block;
+    }
+
+    .header_menu-wrapper {
+        display: none;
+    }
+
+    .first_screen_earned {
+        width: 280px;
+    }
+
+    .first_screen_head {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .page-indent {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header_box {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
